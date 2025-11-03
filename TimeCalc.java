@@ -15,17 +15,17 @@ public class TimeCalc {
         hours = hours + totalHours;
         mins = mins + extraTime;
 
-        
-        while(hours > 23)
-        {
-            hours = hours -24;
-        }
-        
-        if(mins > 59)
+      if(mins > 59)
         {
             hours++;
             mins = mins - 60;
         }
+        
+        while(hours >= 24)
+        {
+            hours = hours -24;
+        }
+        
 
         if(hours < 10 && mins < 10)
         {
